@@ -35,7 +35,7 @@ const ExpandAddress: FC<IExpandAddress> = ({ transactions, errIndex }) => {
                       errIndex?.includes(i)
                         ? "text-[#F04438]"
                         : "text-[#70707B]"
-                    } whitespace-nowrap`}
+                    } break-all`}
                   >
                     {e.address}, {e.amount}
                   </span>

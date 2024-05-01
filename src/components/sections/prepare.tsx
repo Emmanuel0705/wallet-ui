@@ -104,22 +104,23 @@ const Prepare: FC = () => {
                           errIndex?.includes(i)
                             ? "text-[#F04438]"
                             : "text-[#70707B]"
-                        } whitespace-nowrap`}
+                        } break-all`}
                       >
                         {e.address}, {e.amount}
                       </span>
                     </div>
                   ))
                 ) : (
-                  <div className="flex flex-col gap-6 ">
+                  <div className="flex flex-col gap-6  max-w-screen-sm">
                     <div className="flex gap-6">
                       <span className="text-xs text-[#9B8AFB]"> 0</span>
                       <span>By format: address, amount</span>
                     </div>
-
-                    <span className="text-xs ml-8 text-[#70707B] whitespace-nowrap ">
-                      0x3187d7b392f74388F5DD17525BeFF8a6f7Bcb11e, 0
-                    </span>
+                    <div className="text-xs ml-8 text-[#70707B] flex">
+                      <div className="break-all">
+                        0x3187d7b392f74388F5DD17525BeFF8a6f7Bcb11e, 0
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

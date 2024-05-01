@@ -14,7 +14,10 @@ const Main: FC = () => {
         <div className="flex flex-col md:flex-row  justify-center mb-4 p-3">
           <div className="flex md:flex-col z-10 gap-2 items-center ml-1 ">
             {!isPrepared ? (
-              <StepBaseIcon className="md:-mt-1" color="#6938EF" />
+              <StepBaseIcon
+                className="md:-mt-1 -ml-[2px] md:-ml-0"
+                color="#6938EF"
+              />
             ) : (
               <StepcheckIcon />
             )}

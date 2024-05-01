@@ -9,7 +9,9 @@ import { shortWalletAddress } from "@/utils";
 
 const Header: FC = () => {
   const { open } = useWeb3Modal();
+
   const { address, isConnected } = useWeb3ModalAccount();
+
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6 overflow-hidden sticky top-0 z-40 bg-[#FAFAFA]">
       <img src="/images/sm-logo.png" className="md:hidden w-auto h-[30px]" />
