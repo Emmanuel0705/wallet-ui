@@ -12,7 +12,6 @@ export const shortWalletAddress = (walletAddress: string): string => {
 
 export const isArrayValid = (array: any[]): boolean => {
   for (const item of array) {
-    console.log({ item });
     if (!("address" in item) || !("amount" in item)) {
       return false;
     }

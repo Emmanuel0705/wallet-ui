@@ -38,7 +38,6 @@ export const TransactionProvider: React.FC<Props> = ({ children }) => {
         Papa.parse(file, {
           complete: (result) => {
             if (result?.data?.length) {
-              console.log(isArrayValid(result.data));
               if (isArrayValid(result?.data)) {
                 setTransactions(result?.data as [ITransaction]);
               }
