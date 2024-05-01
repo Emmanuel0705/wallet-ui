@@ -97,7 +97,7 @@ const Prepare: FC = () => {
               <div className="z-20 text-xs text-[#70707B] flex-1 relative flex flex-col px-3 gap-2 h-[210px] bg-transparent ">
                 {transactions?.length ? (
                   transactions?.map((e: ITransaction, i) => (
-                    <div className="flex gap-6 ">
+                    <div key={e.address + i} className="flex gap-6 ">
                       <span className="text-xs text-[#9B8AFB]"> {i + 1}</span>
                       <span
                         className={`text-xs ${
@@ -157,7 +157,7 @@ const Prepare: FC = () => {
           <div>
             <ScrollArea className="p-4 w-full mt-1 max-h-24 border border-[#FDA29B] flex flex-col gap-2 rounded-lg bg-[#FFFBFA]">
               {errors?.map((e: IError) => (
-                <div className="gap-2 flex flex-col">
+                <div key={e.index} className="gap-2 flex flex-col">
                   <p className="text-[#D92D20] text-xs">{e.message}</p>
                   <p className="text-[#B42318] text-xs font-medium">
                     Go to line {e.index}

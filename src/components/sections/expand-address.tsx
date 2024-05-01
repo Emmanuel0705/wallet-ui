@@ -28,7 +28,7 @@ const ExpandAddress: FC<IExpandAddress> = ({ transactions, errIndex }) => {
           <ScrollArea className="w-full pr-5 border-[#9B8AFB] rounded-2xl bg-[#ffffff] border border-l-0 pb-0 py-3">
             <div className="z-20 text-xs text-[#70707B] flex-1 relative flex flex-col px-3 gap-2 h-[210px] bg-transparent ">
               {transactions?.map((e, i) => (
-                <div className="flex gap-6 ">
+                <div key={e.address + i} className="flex gap-6 ">
                   <span className="text-xs text-[#9B8AFB]">{i + 1}</span>
                   <span
                     className={`text-xs ${

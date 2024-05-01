@@ -1,8 +1,8 @@
 import SideBar from "@/components/sections/sidebar";
 import Header from "@/components/sections/header";
 import Main from "@/pages/main";
-import { initWeb3Modal } from "./utils";
 import { TransactionProvider } from "./components/context/transaction";
+import { initWeb3Modal } from "./utils/wallet-connet";
 
 initWeb3Modal();
 

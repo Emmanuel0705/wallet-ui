@@ -51,8 +51,11 @@ const Summary: FC = () => {
 
             <ScrollArea className="w-full pb-0 py-3">
               <div className="z-20 text-xs text-[#70707B] flex flex-col gap-2 h-[210px] bg-transparent ">
-                {transactions?.map((trx) => (
-                  <div className="flex justify-between border-b border-b-[#F4F4F5] py-3">
+                {transactions?.map((trx, i) => (
+                  <div
+                    key={trx.address + i}
+                    className="flex justify-between border-b border-b-[#F4F4F5] py-3"
+                  >
                     <span className="text-xs text-[#70707B] whitespace-nowrap w-[90%] md:w-full truncate">
                       {trx.address}
                     </span>
