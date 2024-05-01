@@ -66,16 +66,17 @@ const Prepare: FC = () => {
 
   return (
     <div className="relative overflow-hidden p-5 md:p-9 flex flex-1 self-center bg-[#FFFFFF] w-full lg:w-2/3 xl:w-2/4  rounded-lg md:border md:border-[#F4F4F5]">
-      <CheckerBG className="absolute top-0 right-0" />
-      <div className="flex flex-col gap-1 w-full">
+      <CheckerBG className="absolute top-0 right-0 z-0" />
+      <div className="flex flex-col gap-1 w-full z-10">
         <h3 className="md:text-[30px] text-[20px] text-[#18181B]">
           Multi sender
         </h3>
-        <div className="my-4">
-          <label className="text-[#3F3F46] text-sm">Token Address</label>
+        <div className="my-4 w-full">
+          {/* <label className="text-[#3F3F46] text-sm">Token Address</label> */}
           <Input
-            className="border-[#9B8AFB] placeholder:text-xs text-xs my-2 text-[#70707B] rounded-2xl outline-none"
-            placeholder="Paste token address here"
+            type="text"
+            className="border-[#9B8AFB] w-full z-50 placeholder:text-xs text-xs my-2 text-[#70707B] rounded-2xl outline-none"
+            placeholder="Paste token address here Paste token address her"
           />
         </div>
 
